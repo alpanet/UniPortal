@@ -66,6 +66,7 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="MainPage.aspx" />
     <Content Include="packages.config" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -82,11 +83,32 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="MainPage.aspx.cs">
+      <DependentUpon>MainPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MainPage.aspx.designer.cs">
+      <DependentUpon>MainPage.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Models\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\UniPortal.Helpers\UniPortal.Helpers.csproj">
+      <Project>{beb947c8-40b3-4c0d-855a-64e939f778fc}</Project>
+      <Name>UniPortal.Helpers</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\UniYemek.Object\UniPortal.Object.csproj">
+      <Project>{e62e9644-9854-491f-8e31-f736c3ee7ee7}</Project>
+      <Name>UniPortal.Object</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\UniYemek.Okul\UniPortal.Okul.csproj">
+      <Project>{41d0522a-e28b-4151-921f-ce38d728e16a}</Project>
+      <Name>UniPortal.Okul</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
